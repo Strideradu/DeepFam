@@ -18,7 +18,7 @@ except:
     parser.print_help()
     sys.exit(1)
 
-records = SeqIO.read(args.input, format='fasta')
+records = SeqIO.parse(args.input, format='fasta')
 with open(args.output, 'w') as fout:
     for record in records:
         seq = str(record.seq)
