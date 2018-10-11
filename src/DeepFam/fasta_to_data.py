@@ -30,4 +30,4 @@ with open(args.output, 'w') as fout:
 
         label = GPCR_label[args.label]
         id = record.id
-        print("\t".join([label, seq, id]), file=fout)
+        print("\t".join([str(label), seq, id]), file=fout)
